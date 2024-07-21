@@ -14,8 +14,10 @@ def main() -> str:
     # assign the values from the phyto_helper_data.json file to variables
     base_factory_text = phyto_factory_data["base_text"]
     base_seed_template = phyto_factory_data["seed_text_template"]
+    # base_seed_template = phyto_factory_data["seed_text_template_singles"]
     seed_keyword_exceptions = phyto_factory_data["keyword_exceptions"]
     exception_base_seed_template = phyto_factory_data["exception_seed_text_template"]
+    # exception_base_seed_template = phyto_factory_data["exception_seed_text_template_singles"]
     seeds = phyto_factory_data["seeds"]
     # initialize variables
     final_seed_list = []
