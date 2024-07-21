@@ -3,9 +3,9 @@ name "phyto manager"
 -- power
 every 1 ticks do
     input fe:: from cube
-    output fe:: to _ -- this is the base phyto variable. just 1 small char long to reduce visual clutter ass all phytos will have this variable
+    output fe:: to _ -- this is the base phyto variable. just 1 char long to reduce visual clutter as all phytos will have this variable
 end
-
+    
 -- supply phytos with base items
 every 200 ticks do
     -- base fluids and phyto-gro input
@@ -14,10 +14,9 @@ every 200 ticks do
     -- base output to all types of pytogenic insulators
     output fluid:: to _
     output 64 to each _
-    
 end
 
--- inferium seeds
+--inferium seeds
 every 20 ticks do
     input inferium_seeds from seed_chest
     output 4 retain 4 inferium_seeds to each inferium
@@ -27,7 +26,7 @@ every 20 ticks do
     output inferium_essence to essence_chest
 end
 
--- apatite seeds
+--apatite seeds
 every 20 ticks do
     input apatite_seeds from seed_chest
     output 4 retain 4 apatite_seeds to each apatite
@@ -37,7 +36,7 @@ every 20 ticks do
     output apatite_essence to essence_chest
 end
 
--- saltpeter seeds
+--saltpeter seeds
 every 20 ticks do
     input saltpeter_seeds from seed_chest
     output 4 retain 4 saltpeter_seeds to each saltpeter
@@ -47,7 +46,7 @@ every 20 ticks do
     output saltpeter_essence to essence_chest
 end
 
--- dirt seeds
+--dirt seeds
 every 20 ticks do
     input dirt_seeds from seed_chest
     output 4 retain 4 dirt_seeds to each dirt
@@ -57,7 +56,7 @@ every 20 ticks do
     output dirt_essence to essence_chest
 end
 
--- fire seeds
+--fire seeds
 every 20 ticks do
     input fire_seeds from seed_chest
     output 4 retain 4 fire_seeds to each fire
@@ -67,7 +66,7 @@ every 20 ticks do
     output fire_essence to essence_chest
 end
 
--- iron seeds
+--iron seeds
 every 20 ticks do
     input iron_seeds from seed_chest
     output 4 retain 4 iron_seeds to each iron
@@ -77,7 +76,7 @@ every 20 ticks do
     output iron_essence to essence_chest
 end
 
--- gold seeds
+--gold seeds
 every 20 ticks do
     input gold_seeds from seed_chest
     output 4 retain 4 gold_seeds to each gold
@@ -87,7 +86,7 @@ every 20 ticks do
     output gold_essence to essence_chest
 end
 
--- certus_quartz seeds
+--certus_quartz seeds
 every 20 ticks do
     input certus_quartz_seeds from seed_chest
     output 4 retain 4 certus_quartz_seeds to each certus_quartz
@@ -97,7 +96,7 @@ every 20 ticks do
     output certus_quartz_essence to essence_chest
 end
 
--- fluix seeds
+--fluix seeds
 every 20 ticks do
     input fluix_seeds from seed_chest
     output 4 retain 4 fluix_seeds to each fluix
@@ -107,7 +106,7 @@ every 20 ticks do
     output fluix_essence to essence_chest
 end
 
--- steel seeds
+--steel seeds
 every 20 ticks do
     input steel_seeds from seed_chest
     output 4 retain 4 steel_seeds to each steel
@@ -117,17 +116,17 @@ every 20 ticks do
     output steel_essence to essence_chest
 end
 
--- end seeds
+--end seeds
 every 20 ticks do
     input end_seeds from seed_chest
-    output 4 retain 4 end_seeds to each end_phyto -- exception due to keyword
+    output 4 retain 4 end_seeds to each end_phyto -- exception due to keyword conflct
     forget
     input from end_phyto slots 2-4
     output end_seeds to seed_chest
     output end_essence to essence_chest
 end
 
--- dye seeds
+--dye seeds
 every 20 ticks do
     input dye_seeds from seed_chest
     output 4 retain 4 dye_seeds to each dye
@@ -137,7 +136,7 @@ every 20 ticks do
     output dye_essence to essence_chest
 end
 
--- obsidian seeds
+--obsidian seeds
 every 20 ticks do
     input obsidian_seeds from seed_chest
     output 4 retain 4 obsidian_seeds to each obsidian
@@ -147,7 +146,7 @@ every 20 ticks do
     output obsidian_essence to essence_chest
 end
 
--- nether seeds
+--nether seeds
 every 20 ticks do
     input nether_seeds from seed_chest
     output 4 retain 4 nether_seeds to each nether
@@ -157,7 +156,7 @@ every 20 ticks do
     output nether_essence to essence_chest
 end
 
--- redstone seeds
+--redstone seeds
 every 20 ticks do
     input redstone_seeds from seed_chest
     output 4 retain 4 redstone_seeds to each redstone
@@ -167,7 +166,7 @@ every 20 ticks do
     output redstone_essence to essence_chest
 end
 
--- nether_quartz seeds
+--nether_quartz seeds
 every 20 ticks do
     input nether_quartz_seeds from seed_chest
     output 4 retain 4 nether_quartz_seeds to each nether_quartz
@@ -177,7 +176,7 @@ every 20 ticks do
     output nether_quartz_essence to essence_chest
 end
 
--- glowstone seeds
+--glowstone seeds
 every 20 ticks do
     input glowstone_seeds from seed_chest
     output 4 retain 4 glowstone_seeds to each glowstone
@@ -187,7 +186,7 @@ every 20 ticks do
     output glowstone_essence to essence_chest
 end
 
--- soulium seeds
+--soulium seeds
 every 20 ticks do
     input soulium_seeds from seed_chest
     output 4 retain 4 soulium_seeds to each soulium
@@ -197,7 +196,7 @@ every 20 ticks do
     output soulium_essence to essence_chest
 end
 
--- lapis_lazuli seeds
+--lapis_lazuli seeds
 every 20 ticks do
     input lapis_lazuli_seeds from seed_chest
     output 4 retain 4 lapis_lazuli_seeds to each lapis_lazuli
@@ -207,27 +206,27 @@ every 20 ticks do
     output lapis_lazuli_essence to essence_chest
 end
 
--- diamond seeds
+--diamond seeds
 every 20 ticks do
     input diamond_seeds from seed_chest
-    output 3 retain 3 diamond_seeds to each diamond
+    output 4 retain 4 diamond_seeds to each diamond
     forget
     input from diamond slots 2-4
     output diamond_seeds to seed_chest
     output diamond_essence to essence_chest
 end
 
--- emerald seeds
+--emerald seeds
 every 20 ticks do
     input emerald_seeds from seed_chest
-    output 3 retain 3 emerald_seeds to each emerald
+    output 4 retain 4 emerald_seeds to each emerald
     forget
     input from emerald slots 2-4
     output emerald_seeds to seed_chest
     output emerald_essence to essence_chest
 end
 
--- netherite seeds
+--netherite seeds
 every 20 ticks do
     input netherite_seeds from seed_chest
     output 4 retain 4 netherite_seeds to each netherite
@@ -237,7 +236,7 @@ every 20 ticks do
     output netherite_essence to essence_chest
 end
 
--- squid seeds
+--squid seeds
 every 20 ticks do
     input squid_seeds from seed_chest
     output 4 retain 4 squid_seeds to each squid
@@ -247,7 +246,7 @@ every 20 ticks do
     output squid_essence to essence_chest
 end
 
--- fish seeds
+--fish seeds
 every 20 ticks do
     input fish_seeds from seed_chest
     output 4 retain 4 fish_seeds to each fish
@@ -257,7 +256,7 @@ every 20 ticks do
     output fish_essence to essence_chest
 end
 
--- prismarine seeds
+--prismarine seeds
 every 20 ticks do
     input prismarine_seeds from seed_chest
     output 4 retain 4 prismarine_seeds to each prismarine
@@ -265,4 +264,84 @@ every 20 ticks do
     input from prismarine slots 2-4
     output prismarine_seeds to seed_chest
     output prismarine_essence to essence_chest
+end
+
+--ice seeds
+every 20 ticks do
+    input ice_seeds from seed_chest
+    output 4 retain 4 ice_seeds to each ice
+    forget
+    input from ice slots 2-4
+    output ice_seeds to seed_chest
+    output ice_essence to essence_chest
+end
+
+--water seeds
+every 20 ticks do
+    input water_seeds from seed_chest
+    output 4 retain 4 water_seeds to each water
+    forget
+    input from water slots 2-4
+    output water_seeds to seed_chest
+    output water_essence to essence_chest
+end
+
+--nature seeds
+every 20 ticks do
+    input nature_seeds from seed_chest
+    output 4 retain 4 nature_seeds to each nature
+    forget
+    input from nature slots 2-4
+    output nature_seeds to seed_chest
+    output nature_essence to essence_chest
+end
+
+--coal seeds
+every 20 ticks do
+    input coal_seeds from seed_chest
+    output 4 retain 4 coal_seeds to each coal
+    forget
+    input from coal slots 2-4
+    output coal_seeds to seed_chest
+    output coal_essence to essence_chest
+end
+
+--air seeds
+every 20 ticks do
+    input air_seeds from seed_chest
+    output 4 retain 4 air_seeds to each air
+    forget
+    input from air slots 2-4
+    output air_seeds to seed_chest
+    output air_essence to essence_chest
+end
+
+--stone seeds
+every 20 ticks do
+    input stone_seeds from seed_chest
+    output 4 retain 4 stone_seeds to each stone
+    forget
+    input from stone slots 2-4
+    output stone_seeds to seed_chest
+    output stone_essence to essence_chest
+end
+
+--earth seeds
+every 20 ticks do
+    input earth_seeds from seed_chest
+    output 4 retain 4 earth_seeds to each earth
+    forget
+    input from earth slots 2-4
+    output earth_seeds to seed_chest
+    output earth_essence to essence_chest
+end
+
+--nether_star seeds
+every 20 ticks do
+    input nether_star_seeds from seed_chest
+    output 4 retain 4 nether_star_seeds to each nether_star
+    forget
+    input from nether_star slots 2-4
+    output nether_star_seeds to seed_chest
+    output nether_star_essence to essence_chest
 end
