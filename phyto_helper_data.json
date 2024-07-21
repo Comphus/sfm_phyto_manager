@@ -1,0 +1,43 @@
+{
+    "base_text": "name \"phyto manager\"\n\n-- power\nevery 1 ticks do\n    input fe:: from cube\n    output fe:: to _ -- this is the base phyto variable. just 1 char long to reduce visual clutter as all phytos will have this variable\nend\n    \n-- supply phytos with base items\nevery 200 ticks do\n    -- base fluids and phyto-gro input\n    input fluid:: from sink\n    input phytogro from fertilizer\n    -- base output to all types of pytogenic insulators\n    output fluid:: to _\n    output 64 to each _\nend\n",
+    "seed_text_template": "\n--{seed} seeds\nevery 20 ticks do\n    input {seed}_seeds from seed_chest\n    output 4 retain 4 {seed}_seeds to each {seed}\n    forget\n    input from {seed} slots 2-4\n    output {seed}_seeds to seed_chest\n    output {seed}_essence to essence_chest\nend",
+    "exception_seed_text_template": "\n--{seed} seeds\nevery 20 ticks do\n    input {seed}_seeds from seed_chest\n    output 4 retain 4 {seed}_seeds to each {seed}_phyto -- exception due to keyword conflct\n    forget\n    input from {seed}_phyto slots 2-4\n    output {seed}_seeds to seed_chest\n    output {seed}_essence to essence_chest\nend",
+    "keyword_exceptions":[
+        "end"
+    ],
+    "seeds": [
+        "inferium",
+        "apatite",
+        "saltpeter",
+        "dirt",
+        "fire",
+        "iron",
+        "gold",
+        "certus_quartz",
+        "fluix",
+        "steel",
+        "end",
+        "dye",
+        "obsidian",
+        "nether",
+        "redstone",
+        "nether_quartz",
+        "glowstone",
+        "soulium",
+        "lapis_lazuli",
+        "diamond",
+        "emerald",
+        "netherite",
+        "squid",
+        "fish",
+        "prismarine",
+        "ice",
+        "water",
+        "nature",
+        "coal",
+        "air",
+        "stone",
+        "earth",
+        "nether_star"
+    ]
+}
